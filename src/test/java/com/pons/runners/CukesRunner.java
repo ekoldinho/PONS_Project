@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         glue = "com/pons/step_definitions",
         dryRun = false,
         stepNotifications = true,
-        tags = ""
+        tags = "@wip"
 )
 
 public class CukesRunner {
