@@ -3,7 +3,9 @@ package com.pons.step_definitions;
 import com.pons.utilities.BrowserUtils;
 import com.pons.utilities.Driver;
 import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
 import io.cucumber.java.Scenario;
+import io.cucumber.plugin.event.Node;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -21,10 +23,11 @@ public class Hooks {
 
 */
         if (scenario.isFailed()) {
-            byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
-            scenario.attach(screenshot, "image/png", scenario.getName());
+            if (scenario.getSourceTagNames().contains("@outline")) {
+                byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+                scenario.attach(screenshot, "image/png", scenario.getName());
+            }
         }
-
         BrowserUtils.waitFor(5);
         Driver.closeDriver();
 

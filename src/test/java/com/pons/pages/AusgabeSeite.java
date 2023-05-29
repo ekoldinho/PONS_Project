@@ -11,7 +11,7 @@ public class AusgabeSeite {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy (xpath = "(//span[@itemprop='name'])[3]")
+    @FindBy (xpath = "//*[@id=\"de\"]/div[2]/h1/em")
     public WebElement ausgabeWort;
 
 }

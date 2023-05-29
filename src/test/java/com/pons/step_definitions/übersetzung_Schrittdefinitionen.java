@@ -35,6 +35,9 @@ public class übersetzung_Schrittdefinitionen {
 
     @Then("Der Benutzer sieht das {string} auf der geöffneten Webseite")
     public void derBenutzerSiehtDasAufDerGeöffnetenWebseite(String wort) {
+
+
+
         Driver.getDriver().manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
 
