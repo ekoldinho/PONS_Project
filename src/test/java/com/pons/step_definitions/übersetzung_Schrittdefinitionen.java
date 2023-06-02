@@ -33,7 +33,7 @@ public class übersetzung_Schrittdefinitionen {
         hauptseite.suchschaltfläche.click();
     }
 
-    @Then("Der Benutzer sieht das {string} auf der geöffneten Webseite")
+    @And("Der Benutzer sieht das {string} auf der geöffneten Webseite")
     public void derBenutzerSiehtDasAufDerGeöffnetenWebseite(String wort) {
 
 
@@ -48,4 +48,13 @@ public class übersetzung_Schrittdefinitionen {
 
     }
 
+    @Then("Der Benutzer überprüft {string}, ob das Wort ein Verb, ein Substantiv, ein Adverb oder ein Adjektiv ist.")
+    public void derBenutzerÜberprüftObDasWortEinVerbEinSubstantivEinAdverbOderEinAdjektivIst(String wertTyp) {
+
+        Driver.getDriver().manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+
+        String erwarteteAusgabe = wertTyp;
+        String tatsächlicheAusgabe = ausgabeSeite.wertTyp.getAttribute("data-original-title");
+        Assert.assertEquals(erwarteteAusgabe,tatsächlicheAusgabe);
+    }
 }

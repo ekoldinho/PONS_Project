@@ -14,4 +14,8 @@ public class AusgabeSeite {
     @FindBy (xpath = "//*[@id=\"de\"]/div[2]/h1/em")
     public WebElement ausgabeWort;
 
+    @FindBy (xpath = "(//span[@class='wordclass']/acronym[@title])[1]")
+    public WebElement wertTyp;
+
+
 }
