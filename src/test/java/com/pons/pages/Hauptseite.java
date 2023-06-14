@@ -21,4 +21,7 @@ public class Hauptseite {
     @FindBy (xpath = "//a[@id='search_button']")
     public WebElement suchschaltfläche;
 
+    @FindBy (xpath = "//*[@id=\"shop\"]")
+    public WebElement shopSchaltfläche;
+
 }

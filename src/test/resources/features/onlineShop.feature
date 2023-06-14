@@ -1,3 +1,4 @@
+@wip
 Feature: Der Benutzer kauft online Ressourcen ein
 
   Background:
@@ -9,6 +10,8 @@ Feature: Der Benutzer kauft online Ressourcen ein
     And Der Benutzer sucht nach Ressourcen in der Kategorie „Grammatik“
     And Der Benutzer wendet Filter in Themenwelten an
     And Der Benutzer wählt Ressourcen im Schulthema aus
+    And Der Benutzer fügt das erste aufgeführte Produkt dem Warenkorb hinzu
+    Then Der Benutzer kauft weiter ein
 
 
 

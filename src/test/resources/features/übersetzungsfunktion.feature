@@ -1,4 +1,3 @@
-@wip
 Feature: Der Benutzer übersetzt deutsche Wörter ins Englische
 
   Background:
