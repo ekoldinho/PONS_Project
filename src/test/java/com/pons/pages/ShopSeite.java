@@ -35,4 +35,19 @@ public class ShopSeite {
     @FindBy (xpath = "//a[@class=' close--off-canvas btn is--gradient-grey is--secondary']")
     public WebElement weiterEinkaufenSchaltfläche;
 
+    @FindBy (xpath = "/html/body/div/div[3]/div/h1")
+    public WebElement seitentitel;
+
+    @FindBy (xpath = "//*[@id=\"filter\"]/div[3]/span/span")
+    public WebElement filterHinzugefügt;
+
+    @FindBy (xpath = "(//a[@class='product--title'])[1]")
+    public WebElement produktHinzugefügt;
+
+    @FindBy (xpath = "//span[@class='item--name']")
+    public WebElement produktImWarenkorb;
+
+
+
+
 }
